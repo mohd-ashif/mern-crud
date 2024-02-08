@@ -11,16 +11,17 @@ const Users = () => {
         .catch(err => console.log(err))
 
     }, [])
-
-    const handleDelete = (id) => {
-        axios.delete(`http://localhost:3000/deleteUser/${id}`)
-            .then(res => {
-                console.log(res);
-                window.location.reload();
-            })
-            .catch(err => console.error(err));
-    };
     
+    const handleDelete = (id) => {
+        axios.delete(`http://localhost:3000/delete/${id}`)
+          .then(res => {
+            console.log('Deleted successfully');
+            window.location.reload();
+          })
+          .catch(err => console.error(err));
+      };
+      
+
     return (
         <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
             <div className="w-50 bg-white rounded p-3">

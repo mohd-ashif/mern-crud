@@ -23,15 +23,15 @@ const UpdateUser = () => {
     }, [id]);
 
     const update = (e) => {
-        e.preventDefault();
-        axios.put("http://localhost:3000/updateUser/"+id, { name, email, age })
-            .then(result => {
-                console.log(result)
-                navigate('/')
-            
-            })
-            .catch(err => console.log(err));
-    }
+      e.preventDefault();
+      axios.put(`http://localhost:3000/updateUser/${id}`, { name, email, age })
+          .then(result => {
+              console.log(result.data); 
+              navigate('/'); 
+          })
+          .catch(err => console.error(err)); // Log error for debugging
+  };
+
 
   return (
     <div>
@@ -41,7 +41,7 @@ const UpdateUser = () => {
       <h2>Update User</h2>
       <div className="mb-2">
         <label htmlFor="name">Name</label>
-        <input type="text" placeholder="Enter Name" className="form-control" id="name"  value={name} onChange={(e) => setName(e.target.value)} />
+        <input type="text" placeholder="Enter Name" className="form-control" id="name" required value={name} onChange={(e) => setName(e.target.value)} />
       </div>
       <div className="mb-2">
         <label htmlFor="email">Email</label>

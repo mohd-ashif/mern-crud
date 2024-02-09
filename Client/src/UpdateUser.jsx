@@ -29,7 +29,7 @@ const UpdateUser = () => {
               console.log(result.data); 
               navigate('/'); 
           })
-          .catch(err => console.error(err)); // Log error for debugging
+          .catch(err => console.error(err));
   };
 
 

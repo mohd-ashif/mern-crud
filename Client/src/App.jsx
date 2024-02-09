@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Users from './Users';
 import CreateUser from './CreateUser';
 import UpdateUser from './UpdateUser';
+import "./App.css"
 
 
 function App() {

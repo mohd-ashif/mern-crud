@@ -19,8 +19,8 @@ const CreateUser = () => {
     };
 
     return (
-        <div className="d-flex flex-column justify-content-center align-items-center vh-100 bg-primary">
-            <div className="w-50 bg-white rounded p-3">
+            
+            <div className="w-5 bg-white rounded p-3 ml-3">
                 <form onSubmit={submit}>
                     <h2>Add User</h2>
                     <div className="mb-2">
@@ -38,7 +38,7 @@ const CreateUser = () => {
                     <button type="submit" className="btn btn-success">Submit</button>
                 </form>
             </div>
-        </div>
+
     );
 };
 
